@@ -1,13 +1,8 @@
-function makeArray(firstArray, secondArray, maxLength) {
-  const newArr = firstArray.concat(secondArray);
-  return newArr.length > maxLength ? newArr.slice(0, maxLength) : newArr;
+function calcAverageCalories(days) {
+ let sum = 0
+ for(const day of days) {
+  sum += day.calories;
 }
- 
-
-  console.log(makeArray(["Mango", "Poly"], ["Ajax", "Chelsea"], 3)); // ["Mango", "Poly", "Ajax"]
-  console.log(makeArray(["Mango", "Poly", "Houston"], ["Ajax", "Chelsea"], 4)); // ["Mango", "Poly", "Houston", "Ajax"]
-  console.log(makeArray(["Mango"], ["Ajax", "Chelsea", "Poly", "Houston"], 3)); // ["Mango", "Ajax", "Chelsea"]
-  console.log(makeArray(["Earth", "Jupiter"], ["Neptune", "Uranus"], 2)); // ["Earth", "Jupiter"]
-  console.log(makeArray(["Earth", "Jupiter"], ["Neptune", "Uranus"], 4)); // ["Earth", "Jupiter", "Neptune", "Uranus"]
-  console.log(makeArray(['Earth', 'Jupiter'], ['Neptune', 'Uranus', 'Venus'], 0)); // []
+return days.length > 0 ? sum / days.length : 0;
+}
 
